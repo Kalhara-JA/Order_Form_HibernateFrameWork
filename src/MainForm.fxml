@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="522.0" prefWidth="1382.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFormController">
+   <children>
+      <TextField fx:id="txtCustomerId" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="174.0" promptText="Customer Id" />
+      <TextField fx:id="txtCustomerName" layoutX="199.0" layoutY="14.0" prefHeight="25.0" prefWidth="174.0" promptText="Customer Name" />
+      <TextField fx:id="txtCustomerAddress" layoutX="382.0" layoutY="14.0" prefHeight="25.0" prefWidth="174.0" promptText="Customer Address" />
+      <TextField fx:id="txtCustomerSalary" layoutX="560.0" layoutY="14.0" prefHeight="25.0" prefWidth="174.0" promptText="Customer Salary" />
+      <Button layoutX="614.0" layoutY="53.0" mnemonicParsing="false" onAction="#saveCustomerOnAction" text="Save Customer" />
+      <TableView fx:id="tblCustomer" layoutX="13.0" layoutY="93.0" prefHeight="160.0" prefWidth="720.0">
+        <columns>
+          <TableColumn fx:id="colCustomerId" prefWidth="126.66668701171875" text="Id" />
+            <TableColumn fx:id="colCustomerName" prefWidth="168.33331298828125" text="Name" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="221.99996948242188" text="Address" />
+            <TableColumn fx:id="colCustomerSalary" prefWidth="200.0" text="Salary" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtVehicleId" layoutX="10.0" layoutY="259.0" prefHeight="25.0" prefWidth="174.0" promptText="Vehicle Id" />
+      <TextField fx:id="txtVehicleBrand" layoutX="195.0" layoutY="259.0" prefHeight="25.0" prefWidth="174.0" promptText="Vehicle Brand" />
+      <TextField fx:id="txtVehicleType" layoutX="378.0" layoutY="259.0" prefHeight="25.0" prefWidth="174.0" promptText="Type" />
+      <TextField fx:id="txtVehicleColor" layoutX="556.0" layoutY="259.0" prefHeight="25.0" prefWidth="174.0" promptText="Color" />
+      <Button layoutX="611.0" layoutY="299.0" mnemonicParsing="false" onAction="#saveVehicleOnAction" prefHeight="31.0" prefWidth="119.0" text="Save Vehicle" />
+      <TableView fx:id="tblVehicle" layoutX="13.0" layoutY="337.0" prefHeight="171.0" prefWidth="720.0">
+         <columns>
+            <TableColumn fx:id="colVehicleId" prefWidth="95.66665649414062" text="Vehicle Id" />
+            <TableColumn fx:id="colVehicleBrand" prefWidth="125.0" text="Brand" />
+            <TableColumn fx:id="colVehicleType" prefWidth="114.33331298828125" text="Type" />
+            <TableColumn fx:id="colVehicleColor" prefWidth="104.66668701171875" text="Color" />
+            <TableColumn fx:id="colCustomerIdOfVehicle" prefWidth="135.0" text="Customer Id" />
+            <TableColumn fx:id="colCustomerNameOfVehicle" prefWidth="143.0" text="Customer Name" />
+         </columns>
+      </TableView>
+      <Separator layoutX="742.0" layoutY="14.0" orientation="VERTICAL" prefHeight="495.0" prefWidth="14.0" />
+      <TextField fx:id="txtOrderId" layoutX="756.0" layoutY="196.0" promptText="Order Id" />
+      <DatePicker fx:id="txtOrderDate" layoutX="952.0" layoutY="196.0" promptText="Order Date" />
+      <TextField fx:id="txtTotalCost" layoutX="1179.0" layoutY="196.0" promptText="Total Cost" />
+      <Button layoutX="1273.0" layoutY="235.0" mnemonicParsing="false" onAction="#saveOrderOnAction" text="Save Order" />
+      <TableView fx:id="tblOrder" layoutX="756.0" layoutY="275.0" prefHeight="160.0" prefWidth="610.0">
+        <columns>
+          <TableColumn fx:id="colOrderId" prefWidth="75.0" text="Order Id" />
+          <TableColumn fx:id="colOrderDate" prefWidth="128.0" text="Date" />
+            <TableColumn fx:id="colOrderCost" prefWidth="122.0" text="Cost" />
+            <TableColumn fx:id="colCustomerIdOfOrder" prefWidth="125.0" text="Customer Id" />
+            <TableColumn fx:id="colCustomerNameOfOrder" prefWidth="156.0" text="Customer Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="756.0" layoutY="251.0" text="Order Table">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="71.0" text="Customer Table">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="315.0" text="Vehicle Table">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbItemCodes" layoutX="756.0" layoutY="14.0" prefWidth="150.0" />
+      <TextField fx:id="txtQty" layoutX="913.0" layoutY="14.0" promptText="Qty" />
+      <TableView fx:id="tblItems" layoutX="756.0" layoutY="53.0" prefHeight="135.0" prefWidth="610.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="313.0" text="Item" />
+          <TableColumn fx:id="colItemQty" prefWidth="296.0" text="Qty" />
+        </columns>
+      </TableView>
+      <Button layoutX="1114.0" layoutY="14.0" mnemonicParsing="false" onAction="#addToCartOnAction" text="Add to Cart" />
+   </children>
+</AnchorPane>
